@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    div
+        h1 # Add a post
+        form(action="/posts/add", method="post")
+            p Title
+            input(name="title", type='text')
+            br
+            p Content
+            textarea(name="content", rows="150", cols="150")
+            br
+            button(type="submit") Submit
+            a(class='button button-outline', href="/") Cancel

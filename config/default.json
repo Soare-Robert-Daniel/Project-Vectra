@@ -1,0 +1,10 @@
+{
+  "DB": {
+    "host": "localhost",
+    "user": "vectra",
+    "password": "vectra",
+    "database": "project_vectra",
+    "dateStrings": true
+  },
+  "author": false
+}

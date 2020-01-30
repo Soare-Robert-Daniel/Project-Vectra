@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}. A simple Node.js microblog.
+
+  if author === true
+    h2 #Actions
+    a(class='button button-outline', href="/posts/add") Add Post
+
+  br
+  br
+  h2 #Posts
+
+  div
+    each post in posts
+      div
+        h3 >
+          a(class="post-title" ,href="/posts/view/" + post.id) #{post.title}
+        p(style="color: green") #{post.date}
+        p #{post.description}...
+        div
+          if author
+            a(class='button button-outline', href="/posts/edit/" + post.id) Edit post
+            a(class='button button-outline', href="/posts/delete/" + post.id) Delete post
+
+      br
+      br

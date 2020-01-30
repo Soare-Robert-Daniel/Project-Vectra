@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1= title
+    p(style="color: green")= date
+    p Go to:
+        a(href='/', style="text-decoration: solid;")  Home
+    div.content
+        p= content

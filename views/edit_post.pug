@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    div
+        h1 # Edit the post
+        form(action="/posts/edit/" + id , method="post")
+            input(name="id", type="hidden", value= id)
+            p Title
+            input(name="title", type='text', value= title)
+            br
+            p Content
+            textarea(name="content", rows="150", cols="150")
+                | #{content}
+            br
+            button(type="submit") Submit
+            a(class='button button-outline', href="/") Cancel
